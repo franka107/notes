@@ -1,0 +1,126 @@
+@use "../../styles/variables.scss" as *;
+@use "sass:map";
+
+.flashcards-wrapper {
+  margin: 2rem 0;
+}
+
+.flashcard-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: var(--bodyFont);
+}
+
+.flashcard-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--darkgray);
+}
+
+.card-category {
+  padding: 0.2rem 0.5rem;
+  background: var(--lightgray);
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.flashcard {
+  perspective: 1000px;
+  height: 200px;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.flashcard.flipped .flashcard-inner {
+  transform: rotateY(180deg);
+}
+
+.flashcard-front,
+.flashcard-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.flashcard-front {
+  background-color: var(--light);
+  color: var(--dark);
+  border: 2px solid var(--lightgray);
+}
+
+.flashcard-back {
+  background-color: var(--tertiary);
+  color: var(--light);
+  transform: rotateY(180deg);
+}
+
+.card-content {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.card-hint {
+  position: absolute;
+  bottom: 10px;
+  font-size: 0.8rem;
+  color: var(--gray);
+}
+
+.flashcard-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.flashcard-controls button {
+  flex: 1;
+  background-color: var(--light);
+  border: 1px solid var(--lightgray);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover:not(:disabled) {
+    background-color: var(--secondary);
+    color: var(--light);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+@media (max-width: #{map.get($breakpoints, mobile)}) {
+  .flashcard {
+    height: 160px;
+  }
+
+  .card-content {
+    font-size: 1.4rem;
+  }
+}

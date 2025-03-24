@@ -8,8 +8,8 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
-    pageTitleSuffix: "",
+    pageTitle: "Frank Notes",
+    pageTitleSuffix: "Suffix",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
@@ -29,28 +29,28 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
+          light: "#f7f7f7",
+          lightgray: "#e0e0e0",
+          gray: "#a4a4a4",
+          darkgray: "#595959",
+          dark: "#2d2a2e",
+          secondary: "#ff6188",
+          tertiary: "#a9dc76",
+          highlight: "rgba(253, 151, 31, 0.15)",
+          textHighlight: "#ffd86688",
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
+          light: "#2d2a2e",
+          lightgray: "#403e41",
+          gray: "#727072",
+          darkgray: "#c1c0c0",
+          dark: "#fcfcfa",
+          secondary: "#ff6188",
+          tertiary: "#a9dc76",
+          highlight: "rgba(168, 155, 255, 0.15)",
+          textHighlight: "#ffd86688",
         },
-      },
+      }
     },
   },
   plugins: {
