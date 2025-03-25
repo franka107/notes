@@ -8,7 +8,7 @@ export default (() => {
         <div id="links-header">
           <span>
             <img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Parrot/Color/parrot_color.svg"></img>
-            <a href="/english/michigan-lessons">Michigan English</a>
+            <a href="/notes/english/michigan-lessons">Michigan English</a>
           </span>
           <span>
             <img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Card%20index/Color/card_index_color.svg"></img>
